@@ -1,0 +1,52 @@
+# Novel Writing Skill｜男频商业网文创作
+
+一套面向起点、番茄风格男频商业网文创作的 Codex Skill，覆盖剧情讨论、设定与角色设计、卷纲与章纲、章节草稿、战斗与情感场景、连续性维护、经济体系、AI 写作痕迹清理及阶段性审查。
+
+## 主要能力
+
+- 区分讨论、设定、大纲、草稿、正式化与审查状态，避免草稿污染正式连续性。
+- 使用 L0—L4 分层上下文，在长篇创作中控制信息范围。
+- 维护时间、道具、术语和关键数字四类连续性台账。
+- 为重要角色建立隔离的角色子 Agent 与草稿分支。
+- 提供商业网文、对话、战斗、情感和 AI 痕迹审查工作流。
+- 附带经济体系、角色快照和连续性台账模板。
+
+## 安装
+
+将本仓库克隆或复制到 Codex Skills 目录：
+
+```bash
+git clone https://github.com/yuki1230kk/novel-writing-skill.git ~/.codex/skills/novel-writing
+```
+
+如果设置了 `CODEX_HOME`，请安装到 `$CODEX_HOME/skills/novel-writing`。
+
+安装后重新启动 Codex。在任务中直接提及 `$novel-writing`，或让 Codex 在适合的小说创作任务中自动调用它。
+
+## 目录结构
+
+```text
+novel-writing/
+├── SKILL.md
+├── agents/
+│   └── openai.yaml
+├── assets/
+│   └── project-state-templates/
+└── references/
+```
+
+`SKILL.md` 是入口；`references/` 保存按任务加载的详细工作流；`assets/` 提供可复制到小说项目中的状态模板。
+
+## 使用说明
+
+该 Skill 默认只创作或修改草稿。只有作者明确表示“归为正文”“列为正文”或“正式采用”等，才允许改变章节状态并同步正式资料。
+
+角色子 Agent 功能依赖运行环境提供多 Agent 能力；不支持时，其余写作、规划和审查流程仍可使用。
+
+## 贡献
+
+欢迎提交 Issue 和 Pull Request。提交改动时，请保持入口简洁，将只在特定任务中使用的详细规则放入 `references/`，并确保新增引用可从 `SKILL.md` 或相关参考文件发现。
+
+## 许可证
+
+本项目采用 [MIT License](LICENSE)。

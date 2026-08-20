@@ -1,0 +1,4 @@
+interface:
+  display_name: "小说创作"
+  short_description: "为长篇小说提供剧情规划、正文创作、角色塑造、连续性检查与改稿工作流"
+  default_prompt: "使用 $novel-writing 根据当前项目资料完成小说讨论、规划、创作或修改任务。"
