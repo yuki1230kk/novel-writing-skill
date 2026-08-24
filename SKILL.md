@@ -43,7 +43,7 @@ description: 用于起点、番茄风格的男频商业网文创作。适用于�
 
 角色 Agent 采用“正式状态版本＋草稿分支”隔离，具体见 [character-agent-system.md](references/character-agent-system.md)。同一分支可以复用；草稿被推翻或改走不兼容方案后必须废弃相应分支 Agent，不得让其记忆进入其他分支。章节正式化后，按新正式版本重建或重新初始化角色 Agent。
 
-讨论重大剧情、规划重要选择、写关键对白、战斗、谈判或情感转折前，分别询问相关角色当前欲望、恐惧、隐瞒、误解、自然行动、语言和行为边界，再由主 Agent整合。整合前检查角色 Agent 的行动建议、台词、知识、底线与能力是否彼此一致。
+讨论重大剧情、规划重要选择、写关键对白、战斗、谈判或情感转折前，分别询问相关角色当前欲望、恐惧、隐瞒、误解、自然行动与语言边界，再由主 Agent 整合。规划阶段不让角色 Agent 批量产出“关键台词”；主 Agent 按逐句反应链写完整交锋后，关键场景再让相关 Agent 只审查自己的台词。整合前检查角色 Agent 的行动、知识、底线与能力是否彼此一致。
 
 在支持模型选择的 Codex 环境中，角色 Agent默认使用 `gpt-5.6-terra`，通常采用 `medium`，简单次要角色可用 `low`。创建时优先使用 `fork_turns="none"`，由主 Agent发送经过 L0—L3 筛选的角色上下文，避免复制完整对话。Terra不可用时使用当前环境兼顾能力和成本的模型。最终剧情与正文始终由主 Agent决定。
 
@@ -53,7 +53,7 @@ description: 用于起点、番茄风格的男频商业网文创作。适用于�
 2. 调用相关角色 Agent。
 3. 在内部按 [plot-and-scene-design.md](references/plot-and-scene-design.md) 建立隐藏场景卡。
 4. 按 [commercial-web-fiction.md](references/commercial-web-fiction.md) 保证主角主动性、推进、爽点和追读动力。
-5. 对话与人物塑造读取 [dialogue-and-characterization.md](references/dialogue-and-characterization.md)。
+5. 对话与人物塑造读取 [dialogue-and-characterization.md](references/dialogue-and-characterization.md)：先建立交流意图和冲突骨架，再按上一句话逐句反应，最后做角色复核与人话检查。
 6. 战斗读取 [combat-writing.md](references/combat-writing.md)；重要情感读取 [prose-and-emotion.md](references/prose-and-emotion.md)。能力描述含糊时采用最保守且已被正式资料证明的效果，不得自行扩张精度、范围、对象、持续时间或附加效果。
 7. 完稿后按 [draft-review-and-ai-cleanup.md](references/draft-review-and-ai-cleanup.md) 检查连续性与 AI 痕迹，并修正明确的草稿小问题。
 8. 生成待确认状态变化，不更新正式资料。
