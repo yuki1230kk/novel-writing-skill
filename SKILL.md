@@ -47,6 +47,12 @@ description: 用于起点、番茄风格的男频商业网文创作。适用于�
 
 在支持模型选择的 Codex 环境中，角色 Agent默认使用 `gpt-5.6-terra`，通常采用 `medium`，简单次要角色可用 `low`。创建时优先使用 `fork_turns="none"`，由主 Agent发送经过 L0—L3 筛选的角色上下文，避免复制完整对话。Terra不可用时使用当前环境兼顾能力和成本的模型。最终剧情与正文始终由主 Agent决定。
 
+## 独立读者 Agent
+
+每章新草稿或整章重写完成、主 Agent完成首次连续性检查和 AI 痕迹清理后，交付作者前必须按 [reader-agent-review.md](references/reader-agent-review.md) 创建一个独立读者 Agent。读者 Agent不扮演角色，也不读取大纲、场景卡、作者意图、角色卡、未来剧情或主 Agent的自检结论；它只从目标男频网文读者视角阅读完整本章及必要的前章收尾，重点寻找删去后没有损失的句子、作者替读者总结、故作深沉的比喻与金句、设定或道具台账侵入正文，以及不回应现场、不符合人物身份或过度完整的 AI 味对白。
+
+读者 Agent只提交带原文定位的诊断和删除／改写方向，不整章代写。主 Agent必须逐条判断，直接修正不会改变核心含义的明确问题；涉及伏笔、人物动机、能力规则或结构的建议不得机械采用。读者复核不是质量门，不改变草稿状态。普通局部字词修改不强制重建读者 Agent，除非改动覆盖完整场景、关键对白或作者明确要求复查。
+
 ## 章节草稿流程
 
 1. 建立 L0—L4 上下文并提取相关四表切片。
@@ -56,9 +62,10 @@ description: 用于起点、番茄风格的男频商业网文创作。适用于�
 5. 对话与人物塑造读取 [dialogue-and-characterization.md](references/dialogue-and-characterization.md)：先建立交流意图和冲突骨架，再按上一句话逐句反应，最后做角色复核与人话检查。
 6. 战斗读取 [combat-writing.md](references/combat-writing.md)；重要情感读取 [prose-and-emotion.md](references/prose-and-emotion.md)。能力描述含糊时采用最保守且已被正式资料证明的效果，不得自行扩张精度、范围、对象、持续时间或附加效果。
 7. 完稿后按 [draft-review-and-ai-cleanup.md](references/draft-review-and-ai-cleanup.md) 检查连续性与 AI 痕迹，并修正明确的草稿小问题。
-8. 生成待确认状态变化，不更新正式资料。
+8. 创建独立读者 Agent复核本章，处理其指出的明确 AI 味句子与 AI 味对白，再做一次局部承接检查。
+9. 生成待确认状态变化，不更新正式资料。
 
-隐藏场景卡、角色 Agent内部意见和检查过程默认不展示，除非作者要求。
+隐藏场景卡、角色 Agent与读者 Agent的内部意见和检查过程默认不展示，除非作者要求。
 
 ## 阶段性审查
 
