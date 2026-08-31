@@ -40,7 +40,7 @@
 2. 续写未确认草稿时，为该分支创建或复用分支 Agent，并发送正式版本和该分支全部相关待确认变化。
 3. 同一个角色 Agent 只能在相同 formal_version + draft_branch 下复用。
 4. 草稿被删除、回退或改成不兼容方案时，废弃对应分支 Agent；不得把它继续用于新分支。
-5. 草稿被作者正式采用后，更新角色正式资料，并从新的 formal_version 重建或重新初始化 Agent。不要依赖旧 Agent 自称已经忘记废稿。
+5. 草稿被作者正式采用后，更新角色正式资料并提升 formal_version，使旧分支 Agent失效。正式化动作本身不得调用、重建或重新初始化 Agent；下次该角色真正参与剧情规划、关键对白、战斗或情感场景时，再从新的 formal_version 惰性初始化。不要依赖旧 Agent自称已经忘记废稿。
 
 环境不支持持久 Agent 时，每次按上述版本重新创建，反而更安全。需要时使用 assets/project-state-templates/character-agent-snapshot.md 保存可审计的状态摘要，不保存隐藏思维过程。
 
